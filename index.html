@@ -370,6 +370,36 @@ h2{
     }
 }
 
+/*heart line top*/
+#heart-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin: 20px auto; 
+    opacity: 1;
+}
+
+#heart-line span {
+    font-size: 22px;
+    color: #ffc2d1;
+    transition: 0.3s;
+    cursor: default;
+    display: inline-block;
+    animation: twinkle 3s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+    0%, 100% { 
+        opacity: 0.3; 
+        transform: scale(0.9); 
+    }
+    50% { 
+        opacity: 1; 
+        transform: scale(1.1); 
+    }
+}
+
 #ribbon-container {
     position: relative;
     width: 100%;
@@ -420,10 +450,8 @@ h2{
     justify-content: center;
     align-items: center;
     gap: 25px;
-    margin: 100px auto 150px auto; 
-    opacity: 0;
-    animation: layered-bloom 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
-    animation-delay: 1.6s; 
+    margin: 80px auto 80px auto; 
+    opacity: 1;
 }
 
 #balanced-divider span {
@@ -431,7 +459,25 @@ h2{
     color: #ffc2d1;
     transition: 0.3s;
     cursor: default;
+    display: inline-block;
+    animation: twinkle 3s infinite ease-in-out;
 }
+
+#balanced-divider span:nth-child(even) {
+    animation-delay: 1.5s;
+}
+
+@keyframes twinkle {
+    0%, 100% { 
+        opacity: 0.3; 
+        transform: scale(0.9); 
+    }
+    50% { 
+        opacity: 1; 
+        transform: scale(1.1); 
+    }
+}
+
 
 /*Orientation for portrait*/
 @media (max-width: 768px) {
@@ -527,6 +573,16 @@ h2{
             </div>
         </div>
 </header>
+
+<div id="heart-line">
+    <span>𐙚</span>
+    <span>♡</span>
+    <span>𐙚</span>
+    <span>♡</span>
+    <span>𐙚</span>
+    <span>♡</span>
+    <span>𐙚</span>
+</div>
 
 
     <div id="ribbon-container">
