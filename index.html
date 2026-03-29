@@ -371,22 +371,24 @@ h2{
 }
 
 /*heart line top*/
-#heart-line {
+#heart-line, #balanced-divider {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 25px;
-    margin: 20px auto; 
-    opacity: 1;
+    margin: 40px auto;
 }
 
-#heart-line span {
+#heart-line span, #balanced-divider span {
     font-size: 22px;
     color: #ffc2d1;
-    transition: 0.3s;
-    cursor: default;
     display: inline-block;
     animation: twinkle 3s infinite ease-in-out;
+}
+
+#heart-line span:nth-child(even), 
+#balanced-divider span:nth-child(even) {
+    animation-delay: 1.5s;
 }
 
 @keyframes twinkle {
@@ -444,40 +446,6 @@ h2{
     from { transform: rotate(0deg) translateX(85px) rotate(0deg); }
     to { transform: rotate(360deg) translateX(85px) rotate(-360deg); }
 }
-
-#balanced-divider {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
-    margin: 80px auto 80px auto; 
-    opacity: 1;
-}
-
-#balanced-divider span {
-    font-size: 22px;
-    color: #ffc2d1;
-    transition: 0.3s;
-    cursor: default;
-    display: inline-block;
-    animation: twinkle 3s infinite ease-in-out;
-}
-
-#balanced-divider span:nth-child(even) {
-    animation-delay: 1.5s;
-}
-
-@keyframes twinkle {
-    0%, 100% { 
-        opacity: 0.3; 
-        transform: scale(0.9); 
-    }
-    50% { 
-        opacity: 1; 
-        transform: scale(1.1); 
-    }
-}
-
 
 /*Orientation for portrait*/
 @media (max-width: 768px) {
