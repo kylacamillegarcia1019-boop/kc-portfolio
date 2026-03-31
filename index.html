@@ -10,32 +10,6 @@
 
 <style>
 
-/*back to top button i2*/
-#back-to-top {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background-color: white;
-    border: 2px solid #ffc2d1;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
-    text-decoration: none;
-    box-shadow: 0 5px 15px rgba(255, 133, 161, 0.3);
-    z-index: 9999;
-    transition: 0.3s;
-    cursor: pointer;
-}
-
-#back-to-top:hover {
-    transform: scale(1.1) rotate(10deg);
-    background-color: #fff0f3;
-}
-
 /*e2 naman header to footer*/
 *{
     margin: 0;
@@ -101,6 +75,12 @@ body{
     background-color: #ff85a1;
 }
 
+#socmed{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
 
 h1 {
     font-family: 'Playfair Display', serif;
@@ -136,8 +116,9 @@ h2{
 #project-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
-    gap: 25px;
+    gap: 15px;
     margin-top: 30px;
+    width: 100%
 }
 
 #final-card-wrapper {
@@ -158,6 +139,17 @@ h2{
 #card-7 {
     width: 100%;
     max-width: 310px; 
+    background-color: white;
+    border: 2px solid #ffc2d1;
+    border-radius: 25px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+#card-7:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 133, 161, 0.15);
 }
 
 #card-1:hover, #card-2:hover, #card-3:hover, #card-4:hover, #card-5:hover, #card-6:hover, #card-7:hover {
@@ -210,15 +202,29 @@ h2{
     background-color: #ff85a1;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     #project-list {
         grid-template-columns: 1fr; 
     }
     #final-card-wrapper {
         grid-column: span 1;
+        display: block;
     }
-    #card-7 {
+    #card-1, #card-2, #card-3, #card-4, #card-5, #card-6, #card-7{
+        width:100%;
         max-width: 100%;
+        margin-bottom: 20px;
+    }
+    #socmed{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        margin-top: 20px;
+    }
+    #fb, #ig, #tk{
+        width: 85%;
+        text-align: center;
     }
 }
 
@@ -383,68 +389,6 @@ h2{
     font-size: 22px;
     color: #ffc2d1;
     display: inline-block;
-    animation: twinkle 3s infinite ease-in-out;
-}
-
-#heart-line span:nth-child(even), 
-#balanced-divider span:nth-child(even) {
-    animation-delay: 1.5s;
-}
-
-@keyframes twinkle {
-    0%, 100% { 
-        opacity: 0.3; 
-        transform: scale(0.9); 
-    }
-    50% { 
-        opacity: 1; 
-        transform: scale(1.1); 
-    }
-}
-
-#ribbon-container {
-    position: relative;
-    width: 100%;
-    height: 250px; 
-    margin: -10px auto 0 auto; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    animation: layered-bloom 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
-    animation-delay: 1.1s;
-}
-
-#ribbon-egg-glow {
-    position: absolute;
-    width: 220px;
-    height: 280px;
-    background: linear-gradient(180deg, #ffc2d1 0%, #fff9ad 100%);
-    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-    filter: blur(35px);
-    opacity: 0.6;
-    z-index: 1;
-}
-
-#ribbon-center {
-    font-size: 100px;
-    z-index: 2;
-    animation: floating 3s ease-in-out infinite;
-}
-
-#ribbon-one, #ribbon-two {
-    position: absolute;
-    font-size: 30px;
-    z-index: 3;
-}
-
-#ribbon-one { animation: orbit 5s linear infinite; }
-#ribbon-two { animation: orbit 8s linear infinite reverse; }
-
-@keyframes orbit {
-    from { transform: rotate(0deg) translateX(85px) rotate(0deg); }
-    to { transform: rotate(360deg) translateX(85px) rotate(-360deg); }
 }
 
 /*Orientation for portrait*/
@@ -540,6 +484,7 @@ h2{
 
             </div>
         </div>
+    </div>
 </header>
 
 <div id="heart-line">
@@ -551,14 +496,6 @@ h2{
     <span>♡</span>
     <span>𐙚</span>
 </div>
-
-
-    <div id="ribbon-container">
-    <div id="ribbon-egg-glow">✨</div>
-    <div id="ribbon-center">🎀</div>
-    <div id="ribbon-one">✨</div>
-    <div id="ribbon-two">🎀</div>
-    </div>
 
 <div id="balanced-divider">
     <span>𐙚</span>
