@@ -20,7 +20,7 @@
             height: 100px;
             display: flex;
             align-items: center;
-            justify-content: center
+            justify-content: center;
         }
         
         header h1 {
@@ -28,12 +28,13 @@
         }
         
         nav {
-            background-color: white;
-            height: 50px;
+            background-color: black;
+            width: 100%;
+            min-height: 50px;
         }
         
         main {
-            background-color: rgb(97, 230, 8);
+            background-color: #fff0f3;
         }
         
         aside {
@@ -41,7 +42,7 @@
             width: 20%;
             float: left;
             margin: 0px;
-            height: 300px;
+            height: auto;
             padding: 10px;
         }
         
@@ -70,12 +71,14 @@
             list-style-type: none;
             margin: 0;
             padding: 0;
-            overflow: hidden;
             background-color: #333333;
+            display: block;
+            width: 100%;
         }
         
         li {
             float: left;
+            width: auto;
         }
         
         li a {
@@ -89,14 +92,73 @@
         li a:hover {
             background-color: purple;
         }
-        
-        @media screen and (max-width:800px) {
-            aside,
-            section,
-            article {
-                width: 100%;
+
+        @media screen and (max-width: 1024px) {
+            #project-list{
+                grid-template-columns: repeat(2,1fr);
+            }
+            
+            #final-card-wrapper{
+                grid-column: span 2;
             }
         }
+        
+        @media screen and (max-width:768px) {
+            #main-nav{
+                height: auto;
+                padding: 10px;
+                flex-wrap: wrap;
+            }
+
+            #main-nav a{
+                margin: 5px 10px;
+                font-size: 0.75rem;
+            }
+
+            #main-head{
+                margin-top: 100px;  
+            }
+
+            #profile-content-wrapper{
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+
+            #kc{
+                width: 200px !important;
+                height: 200px !important;
+            }
+
+            #contact{
+                width: 95%;
+                padding: 30px 20px;
+            }
+        }
+
+    @media screen and (max-width: 768px) {
+        aside, section, article {
+            width: 100%;
+            float: none;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        
+        li {
+            float: left;
+            width: auto;
+        }
+
+        li a {
+            padding: 16px;
+            font-size: 16px;
+        }
+    }
+
+    main {
+        padding: 10px;
+    }
+
     </style>
 </head>
 

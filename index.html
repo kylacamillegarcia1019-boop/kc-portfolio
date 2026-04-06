@@ -64,11 +64,15 @@ body{
     display: inline-block;
     background-color: #ffb7c5;
     color: white;
-    padding: 12px 25px;
+    width: 90%;
+    max-width: 250x;
+    padding: 12px 0px;
     text-decoration: none;
     border-radius: 50px;
     font-weight: bold;
+    text-align: center;
     transition: 0.3s;
+    box-sizing: border-box;
 }
 
 #fb:hover, #ig:hover, #tk:hover {
@@ -100,6 +104,19 @@ h1 {
     border: 3px solid #ffc2d1;
     display: block;
     scroll-margin-top: 70px;
+}
+
+/*css for logo*/
+#socmed a i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+#socmed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
 }
 
 
@@ -186,7 +203,7 @@ h2{
     margin-bottom: 20px;
 }
 
-#btn-1, #btn-2, #btn-3, #btn-4, #btn-5, #btn-6, #btn-7 {
+#btn-1, #btn-2, #btn-3, #btn-4, #btn-5, #btn-6, #btn-7{
     display: inline-block;
     background-color: #ffb3c1;
     color: white;
@@ -200,6 +217,41 @@ h2{
 
 #btn-1:hover, #btn-2:hover, #btn-3:hover, #btn-4:hover, #btn-5:hover, #btn-6:hover, #btn-7:hover {
     background-color: #ff85a1;
+}
+
+#btn-1, #btn-2, #btn-3, #btn-4, #btn-5, #btn-6, #btn-7 {
+    display: inline-block;
+    background-color: #ff85a2;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 15px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    width: 130px;
+}
+
+.code-btn {
+    display: inline-block;
+    background-color: transparent;
+    color: #ff85a1;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: 2px solid #ffb3c1;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: bold;
+    width: 90%;
+    max-width: 180px;
+    box-sizing: border-box;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.code-btn:hover {
+    background-color: #fff0f3;
+    border-color: #ff85a1;
 }
 
 @media screen and (max-width: 768px) {
@@ -594,28 +646,34 @@ h2{
     <section id="projects">
     <h2>My Projects🗂️</h2>
     <div id="project-list">
-        <div id="card-1"><div id="num-1">1</div><h3>Midterm Task 1</h3><p>Resume using HTML</p><a href="mt-1.html" id="btn-1">View Project</a></div>
-        <div id="card-2"><div id="num-2">2</div><h3>Midterm Task 2</h3><p>HTML list and table</p><a href="mt-2.html" id="btn-2">View Project</a></div>
-        <div id="card-3"><div id="num-3">3</div><h3>Midterm Task 3</h3><p>HTML Forms</p><a href="mt-3.html" id="btn-3">View Project</a></div>
-        <div id="card-4"><div id="num-4">4</div><h3>Midterm Task 4</h3><p>Image Mapping</p><a href="mt-4.html" id="btn-4">View Project</a></div>
-        <div id="card-5"><div id="num-5">5</div><h3>Midterm Task 5</h3><p>Applying CSS to Resume</p><a href="mt-5.html" id="btn-5">View Project</a></div>
-        <div id="card-6"><div id="num-6">6</div><h3>Midterm Task 6</h3><p>HTML Layout</p><a href="mt-6.html" id="btn-6">View Project</a></div>
+        <div id="card-1"><div id="num-1">1</div><h3>Midterm Task 1</h3><p>Resume using HTML</p><a href="mt-1.html" id="btn-1">View Project</a> <br> <a href="https://pastebin.com/raw/ETUMiNKg" class="code-btn">View Code</a></div>
+        <div id="card-2"><div id="num-2">2</div><h3>Midterm Task 2</h3><p>HTML list and table</p><a href="mt-2.html" id="btn-2">View Project</a> <br> <a href="https://pastebin.com/raw/mTChYipJ" class="code-btn">View Code</a></div>
+        <div id="card-3"><div id="num-3">3</div><h3>Midterm Task 3</h3><p>HTML Forms</p><a href="mt-3.html" id="btn-3">View Project</a> <br> <a href="https://pastebin.com/raw/zbDZnHx6" class="code-btn">View Code</a></div>
+        <div id="card-4"><div id="num-4">4</div><h3>Midterm Task 4</h3><p>Image Mapping</p><a href="mt-4.html" id="btn-4">View Project</a> <br> <a href="https://pastebin.com/raw/pGmR8JDY" class="code-btn">View Code</a></div>
+        <div id="card-5"><div id="num-5">5</div><h3>Midterm Task 5</h3><p>Applying CSS to Resume</p><a href="mt-5.html" id="btn-5">View Project</a> <br> <a href="https://pastebin.com/raw/1U14BhfZ" class="code-btn">View Code</a></div>
+        <div id="card-6"><div id="num-6">6</div><h3>Midterm Task 6</h3><p>HTML Layout</p><a href="mt-6.html" id="btn-6">View Project</a> <br> <a href="https://pastebin.com/raw/HtSq3uDX" class="code-btn">View Code</a></div>
         
         <div id="final-card-wrapper">
-            <div id="card-7"><div id="num-7">1</div><h3>Final Task 1</h3><p>Responsive Layout</p><a href="ft-1.html" id="btn-7">View Project</a></div>
+            <div id="card-7"><div id="num-7">1</div><h3>Final Task 1</h3><p>Responsive Layout</p><a href="ft-1.html" id="btn-7">View Project</a> <br> <a href="https://pastebin.com/raw/y4fizwBX" class="code-btn">View Code</a></div>
         </div>
     </div>
 </section>
 
 
     <footer id="contact">
-        <h2>Contact Me &#127872</h2>
-        <div id="socmed">
-            <a href="https://www.facebook.com/share/188WrtGCL1/" id="fb">Facebook</a>
-            <a href="https://www.instagram.com/cmlxie?igsh=OGkxYzc4MXJja3dm" id="ig">Instagram</a>
-            <a href="https://www.tiktok.com/@cmlxie?_r=1&_t=ZS-950RHeYD8EM" id="tk">Tiktok</a>
-        </div>
-    </footer>
+    <h2>Contact Me 🎀</h2>
+    <div id="socmed">
+        <a href="https://www.facebook.com/share/188WrtGCL1/" id="fb">
+            <i class="fa-brands fa-facebook"></i> Facebook
+        </a>
+        <a href="https://www.instagram.com/cmlxie?igsh=OGkxYzc4MXJja3dm" id="ig">
+            <i class="fa-brands fa-instagram"></i> Instagram
+        </a>
+        <a href="https://www.tiktok.com/@cmlxie?_r=1&_t=ZS-950RHeYD8EM" id="tk">
+            <i class="fa-brands fa-tiktok"></i> Tiktok
+        </a>
+    </div>
+</footer>
 
     <div id="portfolio-bottom-bar">
     <p>WS Portfolio • 2026</p>
