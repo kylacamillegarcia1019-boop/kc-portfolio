@@ -203,55 +203,42 @@ h2{
     margin-bottom: 20px;
 }
 
-#btn-1, #btn-2, #btn-3, #btn-4, #btn-5, #btn-6, #btn-7{
-    display: inline-block;
-    background-color: #ffb3c1;
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
+/* This makes both buttons the exact same size */
+#btn-1, #btn-2, #btn-3, #btn-4, #btn-5, #btn-6, #btn-7, .code-btn {
+    display: inline-block !important;
+    width: 150px !important;
+    padding: 10px 0 !important;
+    margin-top: 12px;
     border-radius: 50px;
+    text-decoration: none;
     font-size: 0.85rem;
     font-weight: bold;
+    text-align: center;
+    box-sizing: border-box !important;
     transition: 0.3s;
 }
 
+/* Colors for View Project */
+#btn-1, #btn-2, #btn-3, #btn-4, #btn-5, #btn-6, #btn-7 {
+    background-color: #ffb3c1;
+    color: white;
+    border: 2px solid #ffb3c1;
+}
+
+/* Colors for View Code */
+.code-btn {
+    background-color: transparent;
+    color: #ff85a1;
+    border: 2px solid #ffb3c1;
+}
+
+/* Hover Effects */
 #btn-1:hover, #btn-2:hover, #btn-3:hover, #btn-4:hover, #btn-5:hover, #btn-6:hover, #btn-7:hover {
     background-color: #ff85a1;
 }
 
-#btn-1, #btn-2, #btn-3, #btn-4, #btn-5, #btn-6, #btn-7 {
-    display: inline-block;
-    background-color: #ff85a2;
-    color: white;
-    padding: 10px 20px;
-    margin-top: 15px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    width: 130px;
-}
-
-.code-btn {
-    display: inline-block;
-    background-color: transparent;
-    color: #ff85a1;
-    padding: 10px 20px;
-    margin-top: 10px;
-    border: 2px solid #ffb3c1;
-    border-radius: 50px;
-    text-decoration: none;
-    font-size: 0.85rem;
-    font-weight: bold;
-    width: 90%;
-    max-width: 180px;
-    box-sizing: border-box;
-    text-align: center;
-    transition: 0.3s;
-}
-
 .code-btn:hover {
     background-color: #fff0f3;
-    border-color: #ff85a1;
 }
 
 @media screen and (max-width: 768px) {
