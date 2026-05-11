@@ -140,28 +140,21 @@ h2{
 
 #final-card-wrapper {
     grid-column: 1 / span 3; 
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    width: 100%;
     justify-content: center;
 }
 
-#card-1, #card-2, #card-3, #card-4, #card-5, #card-6, #card-7 {
+#card-1, #card-2, #card-3, #card-4, #card-5, #card-6, #card-7, #card-8, #card-9 {
     background-color: white;
     border: 2px solid #ffc2d1;
     border-radius: 25px;
     padding: 30px 20px;
     text-align: center;
     transition: 0.3s;
-}
-
-#card-7 {
     width: 100%;
-    max-width: 310px; 
-    background-color: white;
-    border: 2px solid #ffc2d1;
-    border-radius: 25px;
-    padding: 30px 20px;
-    text-align: center;
-    transition: 0.3s;
 }
 
 #card-7:hover{
@@ -169,12 +162,12 @@ h2{
     box-shadow: 0 10px 20px rgba(255, 133, 161, 0.15);
 }
 
-#card-1:hover, #card-2:hover, #card-3:hover, #card-4:hover, #card-5:hover, #card-6:hover, #card-7:hover {
+#card-1:hover, #card-2:hover, #card-3:hover, #card-4:hover, #card-5:hover, #card-6:hover, #card-7:hover, #card-8:hover, #card-9:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(255, 133, 161, 0.15);
 }
 
-#num-1, #num-2, #num-3, #num-4, #num-5, #num-6, #num-7 {
+#num-1, #num-2, #num-3, #num-4, #num-5, #num-6, #num-7, #num-8, #num-9 {
     width: 60px;
     height: 60px;
     background-color: #ff85a1;
@@ -204,7 +197,7 @@ h2{
 }
 
 /* This makes both buttons the exact same size */
-#btn-1, #btn-2, #btn-3, #btn-4, #btn-5, #btn-6, #btn-7, .code-btn {
+#btn-1, #btn-2, #btn-3, #btn-4, #btn-5, #btn-6, #btn-7, #btn-8, #btn-9, .code-btn {
     display: inline-block !important;
     width: 150px !important;
     padding: 10px 0 !important;
@@ -219,7 +212,7 @@ h2{
 }
 
 /* Colors for View Project */
-#btn-1, #btn-2, #btn-3, #btn-4, #btn-5, #btn-6, #btn-7 {
+#btn-1, #btn-2, #btn-3, #btn-4, #btn-5, #btn-6, #btn-7, #btn-8, #btn-9 {
     background-color: #ffb3c1;
     color: white;
     border: 2px solid #ffb3c1;
@@ -233,7 +226,7 @@ h2{
 }
 
 /* Hover Effects */
-#btn-1:hover, #btn-2:hover, #btn-3:hover, #btn-4:hover, #btn-5:hover, #btn-6:hover, #btn-7:hover {
+#btn-1:hover, #btn-2:hover, #btn-3:hover, #btn-4:hover, #btn-5:hover, #btn-6:hover, #btn-7:hover, #btn-8:hover, #btn-9:hover {
     background-color: #ff85a1;
 }
 
@@ -246,10 +239,13 @@ h2{
         grid-template-columns: 1fr; 
     }
     #final-card-wrapper {
-        grid-column: span 1;
-        display: block;
+        grid-column: span 3;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+        width: 100%;
     }
-    #card-1, #card-2, #card-3, #card-4, #card-5, #card-6, #card-7{
+    #card-1, #card-2, #card-3, #card-4, #card-5, #card-6, #card-7, #card-8, #card-9{
         width:100%;
         max-width: 100%;
         margin-bottom: 20px;
@@ -642,6 +638,8 @@ h2{
         
         <div id="final-card-wrapper">
             <div id="card-7"><div id="num-7">1</div><h3>Final Task 1</h3><p>Responsive Layout</p><a href="ft-1.html" id="btn-7">View Project</a> <br> <a href="https://pastebin.com/raw/y4fizwBX" class="code-btn">View Code</a></div>
+            <div id="card-8"><div id="num-8">2</div><h3>Final Task 2</h3><p>Using CSS Positions</p><a href="ft-2.html" id="btn-8">View Project</a> <br> <a href="https://pastebin.com/raw/wQCEyqBD" class="code-btn">View Code</a></div>
+            <div id="card-9"><div id="num-9">3</div><h3>Final Task 3</h3><p>Integrating Bootstrap</p><a href="ft-3.html" id="btn-9">View Project</a> <br> <a href="https://pastebin.com/raw/SwMn7vVe" class="code-btn">View Code</a></div>
         </div>
     </div>
 </section>
